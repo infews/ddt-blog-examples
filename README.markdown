@@ -19,11 +19,11 @@ I'm going to make a key assumption that you're using a BDD system for your tests
 
 The most common place to share code is with common setup.  So you write a function:
 
-  * soccer-ball-spec.js
+  * [soccer-ball-spec.js](http://github.com/infews/ddt-blog-examples/blob/master/spec/soccer-ball-spec.js)
 
 BDD frameworks give you a test context with a `before` function for exactly this purpose. Your setup is clamoring to be written once, but instead of hiding this into a scoped function, put it in a `before` at the top of your `describe` block like this:
 
-  * soccer-ball-refactored-spec.js
+  * [soccer-ball-refactored-spec.js](http://github.com/infews/ddt-blog-examples/blob/master/spec/soccer-ball-refactored-spec.js)
 
 Isn't that better?  You get code sharing, but in a common construct that means your test reads nicely top-to-bottom. And when it reads nicely, it's easier to understand.
 
@@ -33,11 +33,11 @@ Isn't that better?  You get code sharing, but in a common construct that means y
 
 So, what you're saying is that you've got something like this:
 
-  * soccer-and-playground-spec.js
+  * [soccer-and-playground-spec.js](http://github.com/infews/ddt-blog-examples/blob/master/spec/soccer-and-playground-spec.js)
 
 Your setup varies just by the class or object under test. And the objects share some behavior, but not all. So let's build a shared example group.
 
-  * soccer-and-playground-refactored-spec.js
+  * [soccer-and-playground-refactored-spec.js](http://github.com/infews/ddt-blog-examples/blob/master/spec/soccer-and-playground-refactored-spec.js)
 
 Yes, the expectations are 'hiding' up at the top of the file or even in another file. This is still indirection, but when I look at that block of code I don't have to change mental contexts to understand what's going on. It's just a collection of `describe`s and `it`s and I know how to read those.
 
