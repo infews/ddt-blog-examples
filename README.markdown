@@ -44,3 +44,8 @@ Yes, the expectations are 'hiding' up at the top of the file or even in another 
 ## DDT
 
 So it's OK to have DRY tests. Just don't DRY them to the point of being crumbling dust - don't _desiccate_ your tests. DDT for short. Use the tools your test framework provides to factor your tests sensibly and you preserve readability. You and your team will thank your the next time you revisit this test code.
+
+
+## The Code
+
+This code, while trivial, does work per the specs.  You will need to have Ruby then install the [Jasmine](http://github.com/pivotal/jasmine) gem. Then `rake jasmine` from the project root will run the local server and you can see the tests pass. 
